@@ -3,8 +3,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #faf7f2;
-  color: #333;
+  background: white;
+  color: black;
 }
 
 header {
@@ -13,25 +13,52 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
+/* ===== LOGO ===== */
+
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 nav {
   display: flex;
   gap: 20px;
   font-size: 18px;
+ justify-content: center;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  color: #8b5e34;
+  background: #dddddd;
+}
+
+nav a:active {
+  background: #d0d0d0;
 }
 
 .hero {
   text-align: center;
   padding: 50px 20px;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero-image {
+  width: 50%;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
 }
 
 .hero h1 {
@@ -54,12 +81,19 @@ nav a:hover {
 .category-title {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #8b5e34;
+  color: black;
+}
+
+.product-row {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .product-card {
   background: white;
   border-radius: 10px;
+  width: 250px;
   padding: 20px;
   max-width: 300px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -88,6 +122,15 @@ footer {
   color: #777;
   margin-top: 40px;
   border-top: 1px solid #ddd;
+}
+
+/* ===== ICONS ===== */
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: 22px;
 }
 
 /* Mobile Responsive */

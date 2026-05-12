@@ -1,0 +1,147 @@
+<!-- Save this as index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Himalayan Bliss</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #faf7f2;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 30px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #8b5e34;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .category-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #8b5e34;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-name {
+      font-size: 22px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .product-details {
+      margin-top: 10px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        font-size: 16px;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#food">Food</a>
+      <a href="#">Clothing</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Himalayan Bliss</h1>
+    <p>Pure traditional clarified butter from Nepal</p>
+  </section>
+
+  <section class="section" id="food">
+    <h2 class="category-title">Food</h2>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=1200&auto=format&fit=crop" alt="Ghee">
+
+      <div class="product-name">
+        Himalayan Bliss Unclarified Butter
+      </div>
+
+      <div class="product-details">
+        Weight: 500g <br>
+        Price: NPR 850
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Himalayan Bliss • Kathmandu, Nepal
+  </footer>
+
+</body>
+</html>

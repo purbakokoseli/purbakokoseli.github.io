@@ -36,48 +36,6 @@ function changeSlide(direction, button) {
 
 }
 
-let currentImages = [];
-let currentIndex = 0;
-
-/* OPEN POPUP */
-
-function openGallery(element) {
-
-  currentImages = JSON.parse(element.dataset.images);
-
-  currentIndex = 0;
-
-  document.getElementById("galleryImage").src =
-    currentImages[currentIndex];
-
-  document.getElementById("galleryModal").style.display = "flex";
-}
-
-/* CLOSE POPUP */
-
-function closeGallery() {
-
-  document.getElementById("galleryModal").style.display = "none";
-}
-
-/* CHANGE IMAGE */
-
-function changeGallery(direction) {
-
-  currentIndex += direction;
-
-  if (currentIndex < 0) {
-    currentIndex = currentImages.length - 1;
-  }
-
-  if (currentIndex >= currentImages.length) {
-    currentIndex = 0;
-  }
-
-  document.getElementById("galleryImage").src =
-    currentImages[currentIndex];
-}
-
 </script>
 <body>
 
@@ -124,13 +82,13 @@ function changeGallery(direction) {
                   src="./images/clothes/bag1_1.JPG"
                   alt="bag1_1"
 
-                  onclick="openGallery(this)"
-
                   data-images='[
                   "./images/clothes/bag1_1.JPG",
                   "./images/clothes/bag1_2.JPG",
                   "./images/clothes/bag1_3.JPG"
                   ]'
+
+                  data-index="0"
                 >
 
                 <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
@@ -156,12 +114,12 @@ function changeGallery(direction) {
                 src="./images/clothes/bag2_1.JPG"
                 alt="bag2_1"
 
-                onclick="openGallery(this)"
-
                 data-images='[
                 "./images/clothes/bag2_1.JPG",
                 "./images/clothes/bag2_2.JPG"
                 ]'
+
+                data-index="0"
               >
 
               <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
@@ -186,13 +144,13 @@ function changeGallery(direction) {
                 src="./images/clothes/bag3_1.JPG"
                 alt="bag3_1"
 
-                onclick="openGallery(this)"
-
                 data-images='[
                 "./images/clothes/bag3_1.JPG",
                 "./images/clothes/bag3_2.JPG",
                 "./images/clothes/bag3_3.JPG"
                 ]'
+
+                data-index="0"
               >
 
               <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
@@ -206,9 +164,622 @@ function changeGallery(direction) {
         Product detail: ... <br>
         Price: NPR ...
       </div>
-  </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag4_1.JPG"
+                alt="bag4_1"
+
+                data-images='[
+                "./images/clothes/bag4_1.JPG",
+                "./images/clothes/bag4_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag5_1.JPG"
+                alt="bag5_1"
+
+                data-images='[
+                "./images/clothes/bag5_1.JPG",
+                "./images/clothes/bag5_2.JPG",
+                "./images/clothes/bag5_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag6_1.JPG"
+                alt="bag6_1"
+
+                data-images='[
+                "./images/clothes/bag6_1.JPG",
+                "./images/clothes/bag6_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Sling Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag7_1.JPG"
+                alt="bag7_1"
+
+                data-images='[
+                "./images/clothes/bag7_1.JPG",
+                "./images/clothes/bag7_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Purse (female)
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag8_1.JPG"
+                alt="bag8_1"
+
+                data-images='[
+                "./images/clothes/bag8_1.JPG",
+                "./images/clothes/bag8_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Purse (female)
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag9_1.JPG"
+                alt="bag9_1"
+
+                data-images='[
+                "./images/clothes/bag9_1.JPG",
+                "./images/clothes/bag9_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Purse (female)
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
   </div>
 
+
+
+
+  <h2 class="category-title">Wallet</h2>
+
+  <div class="product-row">
+
+      <div class="product-card">
+
+          <div class="image-slider">
+
+              <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+                <img class="slider-image"
+                  src="./images/clothes/wallet1_1.JPG"
+                  alt="wallet1_1"
+
+                  data-images='[
+                  "./images/clothes/wallet1_1.JPG",
+                  "./images/clothes/wallet1_2.JPG",
+                  "./images/clothes/wallet1_3.JPG"
+                  ]'
+
+                  data-index="0"
+                >
+
+                <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+          </div>
+
+          <div class="product-name">
+            Dhaka Wallet (men)
+          </div>
+
+        <div class="product-details">
+          Product detail: ... <br>
+          Price: NPR ...
+        </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/wallet2_1.JPG"
+                alt="wallet2_1"
+
+                data-images='[
+                "./images/clothes/wallet2_1.JPG",
+                "./images/clothes/wallet2_2.JPG",
+                "./images/clothes/wallet2_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Wallet (men)
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/wallet3_1.JPG"
+                alt="wallet3_1"
+
+                data-images='[
+                "./images/clothes/wallet3_1.JPG",
+                "./images/clothes/wallet3_2.JPG",
+                "./images/clothes/wallet3_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Wallet (men)
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/vest1_1.JPG"
+                alt="vest1_1"
+
+                data-images='[
+                "./images/clothes/vest1_1.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Vest
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <h2 class="category-title">Dhaka clothes pieces</h2>
+
+  <div class="product-row">
+
+      <div class="product-card">
+
+          <div class="image-slider">
+
+              <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+                <img class="slider-image"
+                  src="./images/clothes/dhaka1_1.JPG"
+                  alt="dhaka1_1"
+
+                  data-images='[
+                  "./images/clothes/dhaka1_1.JPG",
+                  "./images/clothes/dhaka1_2.JPG"
+                  ]'
+
+                  data-index="0"
+                >
+
+                <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+          </div>
+
+          <div class="product-name">
+            Dhaka Bag
+          </div>
+
+        <div class="product-details">
+          Product detail: ... <br>
+          Price: NPR ...
+        </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka2_1.JPG"
+                alt="dhaka2_1"
+
+                data-images='[
+                "./images/clothes/dhaka2_1.JPG",
+                "./images/clothes/dhaka2_2.JPG",
+                "./images/clothes/dhaka2_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka3_1.JPG"
+                alt="dhaka3_1"
+
+                data-images='[
+                "./images/clothes/dhaka3_1.JPG",
+                "./images/clothes/dhaka3_2.JPG",
+                "./images/clothes/dhaka3_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka4_1.JPG"
+                alt="dhaka4_1"
+
+                data-images='[
+                "./images/clothes/dhaka4_1.JPG",
+                "./images/clothes/dhaka4_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka5_1.JPG"
+                alt="dhaka5_1"
+
+                data-images='[
+                "./images/clothes/bag5_1.JPG",
+                "./images/clothes/dhaka5_2.JPG",
+                "./images/clothes/dhaka5_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka6_1.JPG"
+                alt="dhaka6_1"
+
+                data-images='[
+                "./images/clothes/dhaka6_1.JPG",
+                "./images/clothes/dhaka6_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka7_1.JPG"
+                alt="dhaka7_1"
+
+                data-images='[
+                "./images/clothes/dhaka7_1.JPG",
+                "./images/clothes/dhaka7_2.JPG"
+                "./images/clothes/dhaka7_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka8_1.JPG"
+                alt="dhaka8_1"
+
+                data-images='[
+                "./images/clothes/dhaka8_1.JPG",
+                "./images/clothes/dhaka8_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+    <div class="product-card">
+
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/dhaka9_1.JPG"
+                alt="dhaka9_1"
+
+                data-images='[
+                "./images/clothes/dhaka9_1.JPG",
+                "./images/clothes/dhaka9_2.JPG",
+                "./images/clothes/dhaka9_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+    </div>
+
+  </div>
 </section>
 
   <footer>

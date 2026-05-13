@@ -36,6 +36,48 @@ function changeSlide(direction, button) {
 
 }
 
+let currentImages = [];
+let currentIndex = 0;
+
+/* OPEN POPUP */
+
+function openGallery(element) {
+
+  currentImages = JSON.parse(element.dataset.images);
+
+  currentIndex = 0;
+
+  document.getElementById("galleryImage").src =
+    currentImages[currentIndex];
+
+  document.getElementById("galleryModal").style.display = "flex";
+}
+
+/* CLOSE POPUP */
+
+function closeGallery() {
+
+  document.getElementById("galleryModal").style.display = "none";
+}
+
+/* CHANGE IMAGE */
+
+function changeGallery(direction) {
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = currentImages.length - 1;
+  }
+
+  if (currentIndex >= currentImages.length) {
+    currentIndex = 0;
+  }
+
+  document.getElementById("galleryImage").src =
+    currentImages[currentIndex];
+}
+
 </script>
 <body>
 

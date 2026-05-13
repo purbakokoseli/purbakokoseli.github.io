@@ -10,6 +10,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+
+function changeSlide(direction, button) {
+
+  const slider = button.parentElement;
+  const image = slider.querySelector(".slider-image");
+
+  const images = JSON.parse(image.dataset.images);
+
+  let index = parseInt(image.dataset.index);
+
+  index += direction;
+
+  if (index < 0) {
+    index = images.length - 1;
+  }
+
+  if (index >= images.length) {
+    index = 0;
+  }
+
+  image.src = images[index];
+  image.dataset.index = index;
+
+}
+
+</script>
 <body>
 
   <header>
@@ -34,43 +61,110 @@
   </header>
 
  <!-- <section class="hero">
-	
+
    	<h1> Unclerified Butter</h1>
     	<p>Pure traditional clarified butter from Nepal</p>
   </section> -->
 
  <section class="section" id="food">
 
-  <h2 class="category-title">Butter</h2>
+  <h2 class="category-title">Bag & Wallet</h2>
 
   <div class="product-row">
 
-    <div class="product-card">
-      <img src="./images/butter.jpg" alt="Ghee">
+      <div class="product-card">
 
-      <div class="product-name">
-        Unclarified Butter
-      </div>
+          <div class="image-slider">
 
-      <div class="product-details">
-        Weight: 100 g <br>
-        Price: NPR 850
-      </div>
+              <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+                <img class="slider-image"
+                  src="./images/clothes/bag1_1.jpg"
+                  alt="Ghee"
+
+                  data-images='[
+                  "./images/clothes/bag1_1.JPG",
+                  "./images/clothes/bag1_2.JPG",
+                  "./images/clothes/bag1_3.JPG"
+                  ]'
+
+                  data-index="0"
+                >
+
+                <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+          </div>
+
+          <div class="product-name">
+            Dhaka Bag
+          </div>
+
+        <div class="product-details">
+          Product detail: ... <br>
+          Price: NPR ...
+        </div>
     </div>
 
     <div class="product-card">
-      <img src="./images/butter.jpg" alt="Ghee">
 
-      <div class="product-name">
-        Unclarified Butter
-      </div>
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag2_1.jpg"
+                alt="Ghee"
+
+                data-images='[
+                "./images/clothes/bag2_1.JPG",
+                "./images/clothes/bag2_2.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
 
       <div class="product-details">
-        Weight: 100 g <br>
-        Price: NPR 850
+        Product detail: ... <br>
+        Price: NPR ...
       </div>
     </div>
+    <div class="product-card">
 
+        <div class="image-slider">
+
+            <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+              <img class="slider-image"
+                src="./images/clothes/bag3_1.jpg"
+                alt="Ghee"
+
+                data-images='[
+                "./images/clothes/bag3_1.JPG",
+                "./images/clothes/bag3_2.JPG",
+                "./images/clothes/bag3_3.JPG"
+                ]'
+
+                data-index="0"
+              >
+
+              <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+        </div>
+
+        <div class="product-name">
+          Dhaka Bag
+        </div>
+
+      <div class="product-details">
+        Product detail: ... <br>
+        Price: NPR ...
+      </div>
+  </div>
   </div>
 
 </section>

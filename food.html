@@ -10,6 +10,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+
+function changeSlide(direction, button) {
+
+  const slider = button.parentElement;
+  const image = slider.querySelector(".slider-image");
+
+  const images = JSON.parse(image.dataset.images);
+
+  let index = parseInt(image.dataset.index);
+
+  index += direction;
+
+  if (index < 0) {
+    index = images.length - 1;
+  }
+
+  if (index >= images.length) {
+    index = 0;
+  }
+
+  image.src = images[index];
+  image.dataset.index = index;
+
+}
+
+</script>
 <body>
 
   <header>
@@ -53,23 +80,44 @@
       </div>
 
       <div class="product-details">
-        Weight: 100 g <br>
+        Weight: 1000 g <br>
         Price: NPR 850
       </div>
     </div>
 
     <div class="product-card">
-      <img src="./images/butter.jpg" alt="Ghee">
 
-      <div class="product-name">
-        Unclarified Butter
-      </div>
+  <div class="image-slider">
 
-      <div class="product-details">
-        Weight: 100 g <br>
-        Price: NPR 850
-      </div>
-    </div>
+    <button class="slider-btn prev" onclick="changeSlide(-1, this)">❮</button>
+
+    <img class="slider-image"
+      src="./images/butter1.jpg"
+      alt="Ghee"
+
+      data-images='[
+        "./images/butter1.JPG",
+        "./images/butter2.JPG",
+        "./images/butter3.JPG"
+      ]'
+
+      data-index="0"
+    >
+
+    <button class="slider-btn next" onclick="changeSlide(1, this)">❯</button>
+
+  </div>
+
+  <div class="product-name">
+    Unclarified Butter
+  </div>
+
+  <div class="product-details">
+    Weight: 1000 g <br>
+    Price: NPR 850
+  </div>
+
+</div>
 
   </div>
 

@@ -133,6 +133,60 @@ footer {
   font-size: 22px;
 }
 
+
+/* ====== IMAGE SLIDER =====*/
+.image-slider {
+  position: relative;
+  width: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ARROWS */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.75);
+  cursor: pointer;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.slider-btn:hover {
+  background: white;
+}
+
+/* LEFT + RIGHT POSITION */
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/* ===========*/
+
 /* Mobile Responsive */
 
 @media (max-width: 600px) {
